@@ -1,0 +1,12 @@
+type = "sandbox"
+name = "blaxel-devbox"
+
+[runtime]
+generation = "mk3"
+memory = 4096
+
+# Dev server port exposed for preview URLs. 80/443/8080 are reserved by Blaxel.
+[[runtime.ports]]
+name = "dev"
+target = 3000
+protocol = "HTTP"  # HTTP so preview URLs can route to it (matches the SDK create path)
